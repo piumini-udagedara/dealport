@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React from "react";
@@ -11,8 +12,7 @@ const CategoriesPage = () => {
           <div className="flex justify-between items-start self-stretch mb-8">
             <h1 className="text-[#023337] text-2xl font-bold">Discover</h1>
             <div className="flex shrink-0 items-center gap-3">
-              <Button variant="primary"
-                onClick={() => alert("Pressed!")}>
+              <Button variant="primary" onClick={() => alert("Pressed!")}>
                 <img
                   src={
                     "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/b9cigcxz_expires_30_days.png"
@@ -20,7 +20,7 @@ const CategoriesPage = () => {
                   className="w-6 h-6 rounded-lg object-fill"
                 />
                 <span className="text-white text-[15px] font-bold">{"Add Product"}</span>
-                </Button>
+              </Button>
               <button
                 className="flex shrink-0 items-center bg-white text-left py-[15px] px-[22px] gap-[7px] rounded-lg border border-solid border-gray-200"
                 onClick={() => alert("Pressed!")}

@@ -3,15 +3,36 @@
 import Image from "next/image";
 
 const categories = [
-  { img: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/k7zb8nag_expires_30_days.png", label: "Electronic", },
-  { img: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/17zxpqsg_expires_30_days.png", label: "Fashion",  },
-  { img: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/821rwji4_expires_30_days.png", label: "Home",  },
+  {
+    img: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/k7zb8nag_expires_30_days.png",
+    label: "Electronic",
+  },
+  {
+    img: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/17zxpqsg_expires_30_days.png",
+    label: "Fashion",
+  },
+  {
+    img: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/821rwji4_expires_30_days.png",
+    label: "Home",
+  },
 ];
 
 const quickAddProducts = [
-  { img: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/c3wjlv6c_expires_30_days.png", name: "Smart Fitness Tracker", price: "$39.99"},
-  { img: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/pwaahxvo_expires_30_days.png", name: "Leather Wallet", price: "$19.99", },
-  { img: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/x6ep7qix_expires_30_days.png", name: "Electric Hair Trimmer", price: "$34.99",  },
+  {
+    img: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/c3wjlv6c_expires_30_days.png",
+    name: "Smart Fitness Tracker",
+    price: "$39.99",
+  },
+  {
+    img: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/pwaahxvo_expires_30_days.png",
+    name: "Leather Wallet",
+    price: "$19.99",
+  },
+  {
+    img: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/x6ep7qix_expires_30_days.png",
+    name: "Electric Hair Trimmer",
+    price: "$34.99",
+  },
 ];
 
 export function AddNewProduct() {
@@ -40,7 +61,7 @@ export function AddNewProduct() {
       <span className="text-[#6A717F] text-sm mb-4 ml-5">Categories</span>
       {categories.map((c) => (
         <button
-          key={c.label} 
+          key={c.label}
           className="flex items-center bg-white text-left p-1.5 mb-3 ml-5 rounded-md border-0 w-[89%]"
           style={{ boxShadow: "0px 1px 3px #00000033" }}
         >
@@ -65,7 +86,11 @@ export function AddNewProduct() {
       <span className="text-[#6A717F] text-sm mb-4 ml-5">Product</span>
       <div className="flex flex-col items-start self-stretch mb-3 mx-5 gap-3">
         {quickAddProducts.map((p) => (
-          <div key={p.name} className="flex flex-col self-stretch gap-3" style={{ borderBottom: "1px solid #E5E7EB" ,paddingBottom: "12px"}}>
+          <div
+            key={p.name}
+            className="flex flex-col self-stretch gap-3"
+            style={{ borderBottom: "1px solid #E5E7EB", paddingBottom: "12px" }}
+          >
             <div className="flex justify-between items-center self-stretch">
               <div className="flex shrink-0 items-center gap-3">
                 <img src={p.img} className="w-[46px] h-[46px] rounded object-fill" alt={p.name} />
@@ -75,7 +100,6 @@ export function AddNewProduct() {
                 </div>
               </div>
               <button className="flex shrink-0 items-center bg-[#4EA674] text-left py-1.5 px-2 gap-1 rounded-[50px] border-0">
-               
                 <Image
                   width={16}
                   height={16}
@@ -86,7 +110,6 @@ export function AddNewProduct() {
                 <span className="text-white text-xs">Add</span>
               </button>
             </div>
-            
           </div>
         ))}
       </div>

@@ -23,12 +23,18 @@ const styles: Record<ButtonVariant, string> = {
 };
 
 const sizes: Record<ButtonSize, string> = {
-  small:  "h-8 text-xs",
+  small: "h-8 text-xs",
   medium: "h-9 text-sm",
-  large:  "h-12 text-base px-6",
+  large: "h-12 text-base px-6",
 };
 
-export function Button({ variant = "outline", size = "medium", children, className = "", ...props }: ButtonProps) {
+export function Button({
+  variant = "outline",
+  size = "medium",
+  children,
+  className = "",
+  ...props
+}: ButtonProps) {
   return (
     <button className={`${styles[variant]} ${sizes[size]} ${className}`} {...props}>
       {children}

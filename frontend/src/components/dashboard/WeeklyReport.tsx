@@ -82,7 +82,10 @@ export function WeeklyReport() {
   const showComparison = !!(thisWeekData && lastWeekData);
 
   return (
-    <div className="flex-1 bg-white py-[23px] rounded-lg" style={{ boxShadow: "0px 1px 3px #00000033" }}>
+    <div
+      className="flex-1 bg-white py-[23px] rounded-lg"
+      style={{ boxShadow: "0px 1px 3px #00000033" }}
+    >
       {/* Header */}
       <div className="flex items-center self-stretch mb-5 ml-5 mr-[31px]">
         <span className="text-[#23272E] text-lg font-bold">Report for this week</span>
@@ -103,7 +106,9 @@ export function WeeklyReport() {
             }`}
             onClick={() => setActiveWeek("this")}
           >
-            <span className={`text-xs ${activeWeek === "this" ? "text-[#4EA674]" : "text-[#6A717F]"}`}>
+            <span
+              className={`text-xs ${activeWeek === "this" ? "text-[#4EA674]" : "text-[#6A717F]"}`}
+            >
               This week
             </span>
           </button>
@@ -113,18 +118,29 @@ export function WeeklyReport() {
             }`}
             onClick={() => setActiveWeek("last")}
           >
-            <span className={`text-xs ${activeWeek === "last" ? "text-[#4EA674]" : "text-[#6A717F]"}`}>
+            <span
+              className={`text-xs ${activeWeek === "last" ? "text-[#4EA674]" : "text-[#6A717F]"}`}
+            >
               Last week
             </span>
           </button>
         </div>
-        <Image width={20} height={20} src="./dotsHorizontal.svg" className="w-5 h-5 object-fill" alt="" />
+        <Image
+          width={20}
+          height={20}
+          src="./dotsHorizontal.svg"
+          className="w-5 h-5 object-fill"
+          alt=""
+        />
       </div>
 
       {/* Stats row */}
       <div className="flex justify-center items-center self-stretch mb-[47px] mx-6 gap-5">
         {stats.map((s) => (
-          <div key={s.label} className="flex flex-col shrink-0 items-start py-[15px] pl-2 pr-6 gap-2">
+          <div
+            key={s.label}
+            className="flex flex-col shrink-0 items-start py-[15px] pl-2 pr-6 gap-2"
+          >
             <span className="text-[#23272E] text-2xl font-bold">{s.value}</span>
             <span className="text-[#8A909A] text-[13px]">{s.label}</span>
           </div>
@@ -132,10 +148,15 @@ export function WeeklyReport() {
       </div>
 
       {/* Chart — shows only the active week */}
-      <div className={`self-stretch mb-6 mx-5 h-[280px] transition-opacity ${loading ? "opacity-40" : "opacity-100"}`}>
+      <div
+        className={`self-stretch mb-6 mx-5 h-[280px] transition-opacity ${loading ? "opacity-40" : "opacity-100"}`}
+      >
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
-            data={chartData.map((r) => ({ day: r.day, sales: activeWeek === "this" ? r["This week"] : r["Last week"] }))}
+            data={chartData.map((r) => ({
+              day: r.day,
+              sales: activeWeek === "this" ? r["This week"] : r["Last week"],
+            }))}
             margin={{ top: 8, right: 16, left: 0, bottom: 0 }}
           >
             <defs>
@@ -145,16 +166,26 @@ export function WeeklyReport() {
               </linearGradient>
             </defs>
             <CartesianGrid strokeDasharray="3 3" stroke="#F0F0F0" vertical={false} />
-            <XAxis dataKey="day" tick={{ fontSize: 12, fill: "#023337" }} axisLine={false} tickLine={false} />
+            <XAxis
+              dataKey="day"
+              tick={{ fontSize: 12, fill: "#023337" }}
+              axisLine={false}
+              tickLine={false}
+            />
             <YAxis tick={{ fontSize: 12, fill: "#023337" }} axisLine={false} tickLine={false} />
             <Tooltip
-              contentStyle={{ fontSize: 12, borderRadius: 8, border: "none", boxShadow: "0 2px 8px #0002" }}
+              contentStyle={{
+                fontSize: 12,
+                borderRadius: 8,
+                border: "none",
+                boxShadow: "0 2px 8px #0002",
+              }}
               formatter={(v) => `$${(v as number).toLocaleString()}`}
             />
             <Area
               type="monotone"
               dataKey="sales"
-              stroke={ "#4EA674" }
+              stroke={"#4EA674"}
               strokeWidth={2.5}
               fill="url(#gradActive)"
               dot={false}

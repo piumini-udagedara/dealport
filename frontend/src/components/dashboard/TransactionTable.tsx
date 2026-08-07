@@ -4,15 +4,78 @@ import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 
 const transactions = [
-  { no: "1.", id: "#6545", date: "01 Oct | 11:29 am", status: "Paid", statusColor: "text-black", amount: "$64", dot: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/b7hpjjjb_expires_30_days.png" },
-  { no: "2.", id: "#5412", date: "01 Oct | 11:29 am", status: "Pending", statusColor: "text-black", amount: "$557", dot: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/x4hxf9ve_expires_30_days.png" },
-  { no: "3.", id: "#6622", date: "01 Oct | 11:29 am", status: "Paid", statusColor: "text-black", amount: "$156", dot: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/7kjvau84_expires_30_days.png" },
-  { no: "4.", id: "#6462", date: "01 Oct | 11:29 am", status: "Paid", statusColor: "text-black", amount: "$265", dot: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/vjdo67cx_expires_30_days.png" },
-  { no: "5.", id: "#6462", date: "01 Oct | 11:29 am", status: "Paid", statusColor: "text-black", amount: "$265", dot: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/2r92ueyo_expires_30_days.png" },
-   { no: "6.", id: "#6545", date: "01 Oct | 11:29 am", status: "Paid", statusColor: "text-black", amount: "$64", dot: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/b7hpjjjb_expires_30_days.png" },
-  { no: "7.", id: "#5412", date: "01 Oct | 11:29 am", status: "Pending", statusColor: "text-black", amount: "$55700000", dot: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/x4hxf9ve_expires_30_days.png" },
-  { no: "8.", id: "#6622", date: "01 Oct | 11:29 am", status: "Paid", statusColor: "text-black", amount: "$156", dot: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/7kjvau84_expires_30_days.png" },
-  
+  {
+    no: "1.",
+    id: "#6545",
+    date: "01 Oct | 11:29 am",
+    status: "Paid",
+    statusColor: "text-black",
+    amount: "$64",
+    dot: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/b7hpjjjb_expires_30_days.png",
+  },
+  {
+    no: "2.",
+    id: "#5412",
+    date: "01 Oct | 11:29 am",
+    status: "Pending",
+    statusColor: "text-black",
+    amount: "$557",
+    dot: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/x4hxf9ve_expires_30_days.png",
+  },
+  {
+    no: "3.",
+    id: "#6622",
+    date: "01 Oct | 11:29 am",
+    status: "Paid",
+    statusColor: "text-black",
+    amount: "$156",
+    dot: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/7kjvau84_expires_30_days.png",
+  },
+  {
+    no: "4.",
+    id: "#6462",
+    date: "01 Oct | 11:29 am",
+    status: "Paid",
+    statusColor: "text-black",
+    amount: "$265",
+    dot: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/vjdo67cx_expires_30_days.png",
+  },
+  {
+    no: "5.",
+    id: "#6462",
+    date: "01 Oct | 11:29 am",
+    status: "Paid",
+    statusColor: "text-black",
+    amount: "$265",
+    dot: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/2r92ueyo_expires_30_days.png",
+  },
+  {
+    no: "6.",
+    id: "#6545",
+    date: "01 Oct | 11:29 am",
+    status: "Paid",
+    statusColor: "text-black",
+    amount: "$64",
+    dot: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/b7hpjjjb_expires_30_days.png",
+  },
+  {
+    no: "7.",
+    id: "#5412",
+    date: "01 Oct | 11:29 am",
+    status: "Pending",
+    statusColor: "text-black",
+    amount: "$55700000",
+    dot: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/x4hxf9ve_expires_30_days.png",
+  },
+  {
+    no: "8.",
+    id: "#6622",
+    date: "01 Oct | 11:29 am",
+    status: "Paid",
+    statusColor: "text-black",
+    amount: "$156",
+    dot: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/7kjvau84_expires_30_days.png",
+  },
 ];
 
 export function TransactionTable() {
@@ -23,7 +86,13 @@ export function TransactionTable() {
         <span className="text-[#23272E] text-lg font-bold">Transaction</span>
         <Button variant="primary">
           <span className="text-white text-sm">Filter</span>
-          <Image width={20} height={20} src="/sort.svg" className="w-5 h-5 rounded-lg object-fill" alt="" />
+          <Image
+            width={20}
+            height={20}
+            src="/sort.svg"
+            className="w-5 h-5 rounded-lg object-fill"
+            alt=""
+          />
         </Button>
       </div>
 
@@ -52,7 +121,9 @@ export function TransactionTable() {
                     <div className="flex items-center gap-1.5">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={tx.dot} className="w-2 h-2 object-fill" alt="" />
-                      <span className={tx.status === "Pending" ? "text-amber-500" : "text-[#21C45D]"}>
+                      <span
+                        className={tx.status === "Pending" ? "text-amber-500" : "text-[#21C45D]"}
+                      >
                         {tx.status}
                       </span>
                     </div>

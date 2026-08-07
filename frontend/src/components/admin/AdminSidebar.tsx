@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { NAV_ITEMS, NAV_SECTIONS, isNavItemActive, type NavItem } from "./nav-config";
 import Avatar from "@/components/ui/Avatar";
+import { clearAuth } from "@/lib/auth";
 
 type AdminSidebarProps = {
   collapsed: boolean;
@@ -16,7 +17,9 @@ function NavLink({ item, collapsed }: { item: NavItem; collapsed: boolean }) {
   const active = isNavItemActive(pathname, item.href);
 
   const content = collapsed ? (
-    <img
+    <Image
+      width={20}
+      height={20}
       src={item.icon}
       className={`${active ? "h-5 w-5" : "h-[18px] w-[18px]"} rounded-md object-fill`}
       alt=""
@@ -60,6 +63,13 @@ function NavLink({ item, collapsed }: { item: NavItem; collapsed: boolean }) {
 }
 
 export default function AdminSidebar({ collapsed, onToggleCollapse }: AdminSidebarProps) {
+  const router = useRouter();
+
+  function handleLogout() {
+    clearAuth();
+    router.push("/login");
+  }
+
   return (
     <div className="flex h-full min-h-screen flex-col items-start self-stretch overflow-hidden bg-white pt-4">
       <div
@@ -134,7 +144,20 @@ export default function AdminSidebar({ collapsed, onToggleCollapse }: AdminSideb
             )}
           </div>
           {!collapsed && (
-            <img src="./menu/logout.svg" className="h-4 w-4 rounded-lg object-fill" alt="" />
+            <button
+              type="button"
+              onClick={handleLogout}
+              className="rounded-lg p-1 transition-colors hover:bg-[#f4f7fa]"
+              aria-label="Logout"
+            >
+              <Image
+                width={20}
+                height={20}
+                src="./menu/logout.svg"
+                className="h-4 w-4 rounded-lg object-fill"
+                alt=""
+              />
+            </button>
           )}
         </div>
         <div
@@ -143,8 +166,10 @@ export default function AdminSidebar({ collapsed, onToggleCollapse }: AdminSideb
           }`}
           title={collapsed ? "Your Shop" : undefined}
         >
-          <img
+          <Image
             src="./menu/shop.svg"
+            width={20}
+            height={20}
             className={`h-5 w-5 rounded-md object-fill ${collapsed ? "" : "mr-2"}`}
             alt=""
           />
@@ -152,7 +177,9 @@ export default function AdminSidebar({ collapsed, onToggleCollapse }: AdminSideb
             <>
               <span className="text-sm text-[#023337]">Your Shop</span>
               <div className="flex-1 self-stretch" />
-              <img
+              <Image
+                width={20}
+                height={20}
                 src="./menu/link-external.svg"
                 className="h-4 w-4 rounded-md object-fill"
                 alt=""

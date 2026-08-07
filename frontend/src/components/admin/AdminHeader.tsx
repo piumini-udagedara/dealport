@@ -19,7 +19,7 @@ export default function AdminHeader({ title }: AdminHeaderProps) {
             fontWeight: 700,
             fontStyle: "Bold",
             fontSize: "22px",
-            color: "#023337"
+            color: "#023337",
           }}
         >
           {title}

@@ -20,7 +20,13 @@ function StatCard({
     >
       <div className="flex justify-between items-center self-stretch mb-2 mx-5">
         <span className="text-[#23272E] text-lg font-bold">{title}</span>
-        <Image width={20} height={20} src="./dotsHorizontal.svg" className="w-5 h-5 object-fill" alt="" />
+        <Image
+          width={20}
+          height={20}
+          src="./dotsHorizontal.svg"
+          className="w-5 h-5 object-fill"
+          alt=""
+        />
       </div>
       <span className="text-[#6A717F] text-sm mb-5 ml-5">{period}</span>
       {children}
@@ -66,7 +72,13 @@ export function StatCards() {
           <div className="flex shrink-0 items-center gap-1.5">
             <span className="text-black text-base">Sales</span>
             <div className="flex shrink-0 items-center">
-              <Image src="./arrow-downward-rounded.svg" className="w-4 h-4 object-fill" alt="" width={16} height={16} />
+              <Image
+                src="./arrow-downward-rounded.svg"
+                className="w-4 h-4 object-fill"
+                alt=""
+                width={16}
+                height={16}
+              />
               <span className="text-[#21C45D] text-sm">
                 {isLoading ? "—" : pct(totalSales, totalSalesPrev)}
               </span>
@@ -90,7 +102,13 @@ export function StatCards() {
           <div className="flex shrink-0 items-center gap-1">
             <span className="text-black text-base">order</span>
             <div className="flex shrink-0 items-center">
-              <Image src="./arrow-downward-rounded.svg" className="w-4 h-4 object-fill" alt="" width={16} height={16} />
+              <Image
+                src="./arrow-downward-rounded.svg"
+                className="w-4 h-4 object-fill"
+                alt=""
+                width={16}
+                height={16}
+              />
               <span className="text-[#21C45D] text-sm">
                 {isLoading ? "—" : pct(totalOrders, totalOrdersPrev)}
               </span>
@@ -111,7 +129,9 @@ export function StatCards() {
           <div className="flex flex-col items-start w-[138px] pr-[29px] gap-[7px]">
             <span className="text-black text-sm">Pending</span>
             <div className="flex items-center self-stretch gap-[8px]">
-              <span className="text-[#023337] text-2xl font-bold">{isLoading ? "…" : pendingOrders}</span>
+              <span className="text-[#023337] text-2xl font-bold">
+                {isLoading ? "…" : pendingOrders}
+              </span>
             </div>
           </div>
           <div className="flex flex-col items-start w-[138px] pr-[49px] gap-[7px]">
@@ -121,7 +141,13 @@ export function StatCards() {
                 {isLoading ? "…" : canceledOrders}
               </span>
               <div className="flex shrink-0 items-center">
-                <Image src="./arrow-upward-rounded.svg" className="w-4 h-4 object-fill" alt="" width={16} height={16} />
+                <Image
+                  src="./arrow-upward-rounded.svg"
+                  className="w-4 h-4 object-fill"
+                  alt=""
+                  width={16}
+                  height={16}
+                />
                 <span className="text-[#F87272] text-sm">—</span>
               </div>
             </div>

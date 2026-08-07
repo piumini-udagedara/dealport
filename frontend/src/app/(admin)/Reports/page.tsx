@@ -72,7 +72,10 @@ export default function ReportsPage() {
             className="flex flex-col gap-1 rounded-xl bg-white p-5"
             style={{ boxShadow: "0px 1px 3px #00000033" }}
           >
-            <div className="h-1 w-8 rounded-full mb-2" style={{ background: STAT_CARD_COLORS[i] }} />
+            <div
+              className="h-1 w-8 rounded-full mb-2"
+              style={{ background: STAT_CARD_COLORS[i] }}
+            />
             <span className="text-2xl font-bold text-[#23272E]">
               {loadingStats ? "…" : card.value}
             </span>
@@ -122,21 +125,45 @@ export default function ReportsPage() {
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="#F0F0F0" vertical={false} />
-              <XAxis dataKey="day" tick={{ fontSize: 12, fill: "#023337" }} axisLine={false} tickLine={false} />
+              <XAxis
+                dataKey="day"
+                tick={{ fontSize: 12, fill: "#023337" }}
+                axisLine={false}
+                tickLine={false}
+              />
               <YAxis tick={{ fontSize: 12, fill: "#023337" }} axisLine={false} tickLine={false} />
               <Tooltip
-                contentStyle={{ fontSize: 12, borderRadius: 8, border: "none", boxShadow: "0 2px 8px #0002" }}
+                contentStyle={{
+                  fontSize: 12,
+                  borderRadius: 8,
+                  border: "none",
+                  boxShadow: "0 2px 8px #0002",
+                }}
                 formatter={(v) => `$${(v as number).toLocaleString()}`}
               />
               <Legend iconType="circle" iconSize={8} wrapperStyle={{ fontSize: 12 }} />
-              <Area type="monotone" dataKey="Last week" stroke="#6467F2"
+              <Area
+                type="monotone"
+                dataKey="Last week"
+                stroke="#6467F2"
                 strokeWidth={activeWeek === "last" ? 2.5 : 1.5}
                 strokeOpacity={activeWeek === "last" ? 1 : 0.35}
-                fill="url(#rGradLast)" fillOpacity={activeWeek === "last" ? 1 : 0.3} dot={false} activeDot={{ r: 5 }} />
-              <Area type="monotone" dataKey="This week" stroke="#4EA674"
+                fill="url(#rGradLast)"
+                fillOpacity={activeWeek === "last" ? 1 : 0.3}
+                dot={false}
+                activeDot={{ r: 5 }}
+              />
+              <Area
+                type="monotone"
+                dataKey="This week"
+                stroke="#4EA674"
                 strokeWidth={activeWeek === "this" ? 2.5 : 1.5}
                 strokeOpacity={activeWeek === "this" ? 1 : 0.35}
-                fill="url(#rGradThis)" fillOpacity={activeWeek === "this" ? 1 : 0.3} dot={false} activeDot={{ r: 5 }} />
+                fill="url(#rGradThis)"
+                fillOpacity={activeWeek === "this" ? 1 : 0.3}
+                dot={false}
+                activeDot={{ r: 5 }}
+              />
             </AreaChart>
           </ResponsiveContainer>
         </div>
@@ -147,12 +174,26 @@ export default function ReportsPage() {
         <span className="mb-4 block text-lg font-bold text-[#23272E]">Day-by-Day Breakdown</span>
         <div className={`h-[220px] transition-opacity ${loading ? "opacity-40" : "opacity-100"}`}>
           <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={chartData} margin={{ top: 8, right: 16, left: 0, bottom: 0 }} barGap={4}>
+            <BarChart
+              data={chartData}
+              margin={{ top: 8, right: 16, left: 0, bottom: 0 }}
+              barGap={4}
+            >
               <CartesianGrid strokeDasharray="3 3" stroke="#F0F0F0" vertical={false} />
-              <XAxis dataKey="day" tick={{ fontSize: 12, fill: "#023337" }} axisLine={false} tickLine={false} />
+              <XAxis
+                dataKey="day"
+                tick={{ fontSize: 12, fill: "#023337" }}
+                axisLine={false}
+                tickLine={false}
+              />
               <YAxis tick={{ fontSize: 12, fill: "#023337" }} axisLine={false} tickLine={false} />
               <Tooltip
-                contentStyle={{ fontSize: 12, borderRadius: 8, border: "none", boxShadow: "0 2px 8px #0002" }}
+                contentStyle={{
+                  fontSize: 12,
+                  borderRadius: 8,
+                  border: "none",
+                  boxShadow: "0 2px 8px #0002",
+                }}
                 formatter={(v) => `$${(v as number).toLocaleString()}`}
               />
               <Legend iconType="circle" iconSize={8} wrapperStyle={{ fontSize: 12 }} />

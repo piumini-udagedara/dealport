@@ -19,7 +19,6 @@ export function TopProducts() {
           <span className="text-[#6467F2] text-xs">All product</span>
         </div>
         <div className="flex items-center self-stretch bg-gray-50 py-2 pl-2 gap-2 rounded-lg">
-
           <Image width={20} height={20} src="./search.svg" className="w-5 h-5 object-fill" alt="" />
           <input
             type="text"

@@ -5,9 +5,9 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_USER: dealport
-      POSTGRES_PASSWORD: dealport
-      POSTGRES_DB: DEALPORT
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: dealport
     volumes:
       - postgres_data:/var/lib/postgresql/data
 

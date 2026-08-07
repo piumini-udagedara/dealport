@@ -23,9 +23,36 @@ const usersPerMinuteData = [
 ];
 
 const salesByCountry = [
-  { flag: "./country/US.png", country: "US", sales: "30k", pct: "25.8%", positive: true, barWidth: "w-[76px]", trendIcon: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/6azpg294_expires_30_days.png" },
-  { flag: "./country/Brazil.png", country: "Brazil", sales: "30k", pct: "15.8%", positive: false, barWidth: "w-[53px]", trendIcon: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/f2r0rh2c_expires_30_days.png" },
-  { flag: "./country/Australia.png", country: "Australia", sales: "25k", pct: "35.8%", positive: true, barWidth: "w-[90px]", trendIcon: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/p8swu52w_expires_30_days.png" },
+  {
+    flag: "./country/US.png",
+    country: "US",
+    sales: "30k",
+    pct: "25.8%",
+    positive: true,
+    barWidth: "w-[76px]",
+    trendIcon:
+      "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/6azpg294_expires_30_days.png",
+  },
+  {
+    flag: "./country/Brazil.png",
+    country: "Brazil",
+    sales: "30k",
+    pct: "15.8%",
+    positive: false,
+    barWidth: "w-[53px]",
+    trendIcon:
+      "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/f2r0rh2c_expires_30_days.png",
+  },
+  {
+    flag: "./country/Australia.png",
+    country: "Australia",
+    sales: "25k",
+    pct: "35.8%",
+    positive: true,
+    barWidth: "w-[90px]",
+    trendIcon:
+      "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/p8swu52w_expires_30_days.png",
+  },
 ];
 
 export function UsersPanel() {
@@ -40,20 +67,39 @@ export function UsersPanel() {
           <span className="text-[#6467F2] text-sm">Users in last 30 minutes</span>
           <span className="text-[#23272E] text-[32px] font-bold mr-[60px]">21.5K</span>
         </div>
-         <Image width={20} height={20} src="./dotsHorizontal.svg" className="w-5 h-5 object-fill" alt="" />
-                   
+        <Image
+          width={20}
+          height={20}
+          src="./dotsHorizontal.svg"
+          className="w-5 h-5 object-fill"
+          alt=""
+        />
       </div>
 
       {/* Users per minute chart */}
       <span className="text-[#6A717F] text-sm mb-3 ml-5">Users per minute</span>
       <div className="self-stretch mb-6 mx-5 h-[80px]">
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={usersPerMinuteData} barSize={8} margin={{ top: 4, right: 4, left: -30, bottom: 0 }}>
+          <BarChart
+            data={usersPerMinuteData}
+            barSize={8}
+            margin={{ top: 4, right: 4, left: -30, bottom: 0 }}
+          >
             <CartesianGrid vertical={false} strokeDasharray="3 3" stroke="#F0F0F0" />
-            <XAxis dataKey="min" tick={{ fontSize: 10, fill: "#8A909A" }} axisLine={false} tickLine={false} />
+            <XAxis
+              dataKey="min"
+              tick={{ fontSize: 10, fill: "#8A909A" }}
+              axisLine={false}
+              tickLine={false}
+            />
             <YAxis tick={{ fontSize: 10, fill: "#8A909A" }} axisLine={false} tickLine={false} />
             <Tooltip
-              contentStyle={{ fontSize: 12, borderRadius: 8, border: "none", boxShadow: "0 2px 8px #0002" }}
+              contentStyle={{
+                fontSize: 12,
+                borderRadius: 8,
+                border: "none",
+                boxShadow: "0 2px 8px #0002",
+              }}
               formatter={(v) => [v, "Users"]}
               labelFormatter={(l) => `Min ${l}`}
             />
@@ -70,8 +116,7 @@ export function UsersPanel() {
       <div
         className="flex flex-col self-stretch bg-cover bg-center py-4 px-5 mb-[5px] gap-[26px] rounded-lg"
         style={{
-          backgroundImage:
-            "url('./expires_30_days.png')",
+          backgroundImage: "url('./expires_30_days.png')",
         }}
       >
         {salesByCountry.map((row) => (
@@ -89,7 +134,9 @@ export function UsersPanel() {
                 <div className="flex items-center gap-[3px]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={row.trendIcon} className="w-[13px] h-[13px] object-fill" alt="" />
-                  <span className={`text-[10px] font-bold ${row.positive ? "text-[#28C76F]" : "text-[#EF4343]"}`}>
+                  <span
+                    className={`text-[10px] font-bold ${row.positive ? "text-[#28C76F]" : "text-[#EF4343]"}`}
+                  >
                     {row.pct}
                   </span>
                 </div>
@@ -101,8 +148,9 @@ export function UsersPanel() {
           </div>
         ))}
       </div>
-<div className="flex flex-col items-end self-stretch  px-5 pt-4">
-      <Button variant="outline-full">View Insight</Button></div>
+      <div className="flex flex-col items-end self-stretch  px-5 pt-4">
+        <Button variant="outline-full">View Insight</Button>
+      </div>
     </div>
   );
 }
