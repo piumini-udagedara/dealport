@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7fcf8;
+  --foreground: #1a1d3a;
+  --surface: #ffffff;
+  --dealport-primary: #4ea574;
+  --dealport-primary-dark: #02333f;
+  --dealport-sidebar: #02333f;
+  --dealport-secondary: #c1e6ba;
+  --dealport-accent: #eaf8e7;
+  --dealport-info: #6467f2;
+  --dealport-success: #21c45d;
+  --dealport-warning: #fdd411;
+  --dealport-error: #ef4343;
+  --dealport-muted: #7c7c7c;
+  --dealport-border: #d8e9de;
+
+  /* Spacing tokens (px): 4, 6, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64 */
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-56: 56px;
+  --space-64: 64px;
+
+  /* Effect tokens */
+  --effect-ambient-1: 0 1px 2px rgba(2, 51, 63, 0.08), 0 1px 1px rgba(2, 51, 63, 0.06);
+  --effect-ambient-3: 0 8px 20px -8px rgba(2, 51, 63, 0.18), 0 3px 8px rgba(2, 51, 63, 0.1);
+  --effect-ambient-6: 0 18px 36px -14px rgba(2, 51, 63, 0.26), 0 6px 14px rgba(2, 51, 63, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-dealport-primary: var(--dealport-primary);
+  --color-dealport-primary-dark: var(--dealport-primary-dark);
+  --color-dealport-sidebar: var(--dealport-sidebar);
+  --color-dealport-secondary: var(--dealport-secondary);
+  --color-dealport-accent: var(--dealport-accent);
+  --color-dealport-info: var(--dealport-info);
+  --color-dealport-muted: var(--dealport-muted);
+  --color-dealport-border: var(--dealport-border);
+  --color-dealport-warning: var(--dealport-warning);
+  --color-dealport-success: var(--dealport-success);
+  --color-dealport-error: var(--dealport-error);
+
+  --spacing-1: var(--space-4);
+  --spacing-1_5: var(--space-6);
+  --spacing-2: var(--space-8);
+  --spacing-3: var(--space-12);
+  --spacing-4: var(--space-16);
+  --spacing-5: var(--space-20);
+  --spacing-6: var(--space-24);
+  --spacing-8: var(--space-32);
+  --spacing-10: var(--space-40);
+  --spacing-12: var(--space-48);
+  --spacing-14: var(--space-56);
+  --spacing-16: var(--space-64);
+
+  --shadow-ambient-1: var(--effect-ambient-1);
+  --shadow-ambient-3: var(--effect-ambient-3);
+  --shadow-ambient-6: var(--effect-ambient-6);
+  --font-sans: var(--font-lato);
+  --font-mono: var(--font-sora);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-lato), sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 14% 16%, rgba(78, 165, 116, 0.12), transparent 34%),
+    radial-gradient(circle at 88% 80%, rgba(193, 230, 186, 0.24), transparent 34%),
+    linear-gradient(180deg, #fbfefc 0%, #f2f9f3 100%);
+}
+
+.effect-ambient-1 {
+  box-shadow: var(--effect-ambient-1);
+}
+
+.effect-ambient-3 {
+  box-shadow: var(--effect-ambient-3);
+}
+
+.effect-ambient-6 {
+  box-shadow: var(--effect-ambient-6);
+}
