@@ -66,7 +66,13 @@ export function AddNewProduct() {
           style={{ boxShadow: "0px 1px 3px #00000033" }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={c.img} className="w-[46px] h-[46px] mr-3 rounded object-fill" alt={c.label} />
+          <Image
+            width={46}
+            height={46}
+            src={c.img}
+            className="w-[46px] h-[46px] mr-3 rounded object-fill"
+            alt={c.label}
+          />
           <span className="text-black text-lg flex-1 text-left">{c.label}</span>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <Image
@@ -93,7 +99,13 @@ export function AddNewProduct() {
           >
             <div className="flex justify-between items-center self-stretch">
               <div className="flex shrink-0 items-center gap-3">
-                <img src={p.img} className="w-[46px] h-[46px] rounded object-fill" alt={p.name} />
+                <Image
+                  width={46}
+                  height={46}
+                  src={p.img}
+                  className="w-[46px] h-[46px] rounded object-fill"
+                  alt={p.name}
+                />
                 <div className="flex flex-col shrink-0 items-start gap-1.5">
                   <span className="text-black text-sm">{p.name}</span>
                   <span className="text-[#4EA674] text-sm font-bold">{p.price}</span>
