@@ -24,7 +24,7 @@ exports.AppModule = AppModule = __decorate([
         imports: [
             config_1.ConfigModule.forRoot({
                 isGlobal: true,
-                envFilePath: ['.env', 'backend/.env'],
+                envFilePath: ['.env.local', '.env', 'backend/.env.local', 'backend/.env'],
             }),
             prisma_module_1.PrismaModule,
             auth_module_1.AuthModule,

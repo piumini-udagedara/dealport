@@ -1,1 +1,1 @@
-import 'dotenv/config';
+import '../scripts/load-env';
