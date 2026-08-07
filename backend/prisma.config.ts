@@ -1,5 +1,13 @@
 import './scripts/load-env';
-import { defineConfig, env } from 'prisma/config';
+import { defineConfig } from 'prisma/config';
+
+// Client generation only reads the schema; it does not connect to Postgres. A
+// placeholder keeps container builds working when deployment secrets are
+// injected only at runtime. Migration and application commands still require
+// a real DATABASE_URL.
+const databaseUrl =
+  process.env.DATABASE_URL ??
+  'postgresql://build:build@localhost:5432/build';
 
 export default defineConfig({
   schema: 'prisma/schema.prisma',
@@ -8,6 +16,6 @@ export default defineConfig({
     seed: 'ts-node prisma/seed.ts',
   },
   datasource: {
-    url: env('DATABASE_URL'),
+    url: databaseUrl,
   },
 });
