@@ -6,8 +6,7 @@ import { defineConfig } from 'prisma/config';
 // injected only at runtime. Migration and application commands still require
 // a real DATABASE_URL.
 const databaseUrl =
-  process.env.DATABASE_URL ??
-  'postgresql://build:build@localhost:5432/build';
+  process.env.DATABASE_URL ?? 'postgresql://build:build@localhost:5432/build';
 
 export default defineConfig({
   schema: 'prisma/schema.prisma',
