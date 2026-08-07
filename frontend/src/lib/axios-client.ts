@@ -1,8 +1,13 @@
 import axios from "axios";
 import { getToken, clearAuth } from "./auth";
 
+const defaultApiUrl =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:3001"
+    : "https://dealport-production-6f04.up.railway.app";
+
 export const axiosClient = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:3001",
+  baseURL: process.env.NEXT_PUBLIC_API_URL ?? defaultApiUrl,
   headers: { "Content-Type": "application/json" },
 });
 

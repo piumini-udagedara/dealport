@@ -8,8 +8,13 @@ const app_module_1 = require("./app.module");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     const config = app.get(config_1.ConfigService);
+    const corsOrigins = config
+        .get('CORS_ORIGIN', 'http://localhost:3000')
+        .split(',')
+        .map((origin) => origin.trim())
+        .filter(Boolean);
     app.enableCors({
-        origin: config.get('CORS_ORIGIN', 'http://localhost:3000'),
+        origin: corsOrigins,
         credentials: true,
     });
     app.useStaticAssets('uploads', {

@@ -8,9 +8,14 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   const config = app.get(ConfigService);
+  const corsOrigins = config
+    .get<string>('CORS_ORIGIN', 'http://localhost:3000')
+    .split(',')
+    .map((origin) => origin.trim())
+    .filter(Boolean);
 
   app.enableCors({
-    origin: config.get<string>('CORS_ORIGIN', 'http://localhost:3000'),
+    origin: corsOrigins,
     credentials: true,
   });
   app.useStaticAssets('uploads', {
@@ -32,7 +37,8 @@ async function bootstrap() {
     .addBearerAuth()
     .build();
 
-  const documentFactory = () => SwaggerModule.createDocument(app, configSwagger);
+  const documentFactory = () =>
+    SwaggerModule.createDocument(app, configSwagger);
   SwaggerModule.setup('docs', app, documentFactory);
 
   const port = config.get<number>('PORT', 3001);
