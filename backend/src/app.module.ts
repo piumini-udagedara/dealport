@@ -12,7 +12,7 @@ import { UploadsModule } from './uploads/uploads.module';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: ['.env', 'backend/.env'],
+      envFilePath: ['.env.local', '.env', 'backend/.env.local', 'backend/.env'],
     }),
     PrismaModule,
     AuthModule,

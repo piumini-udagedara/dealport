@@ -1,4 +1,4 @@
-import 'dotenv/config';
+import '../scripts/load-env';
 import { PrismaClient, ProductStatus, UserRole } from '@prisma/client';
 import { PrismaPg } from '@prisma/adapter-pg';
 import * as bcrypt from 'bcrypt';
