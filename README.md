@@ -1,48 +1,36 @@
 # DEALPORT Admin Dashboard
 
-Full-stack take-home implementation: NestJS + Prisma API with a Next.js admin UI for the DEALPORT e-commerce dashboard.
-
-## Live URLs
-
-| Service  | URL |
-|----------|-----|
-| Frontend | _Deploy and add URL here_ |
-| API      | _Deploy and add URL here_ |
-
-## Seed credentials
-
-| Email | Password |
-|-------|----------|
-| `admin@dealport.com` | `admin123` |
+Full-stack admin dashboard for DEALPORT built with NestJS, Prisma, PostgreSQL, and Next.js.
 
 ## Stack
 
-- **Backend:** NestJS, TypeScript, Prisma, PostgreSQL, JWT
-- **Frontend:** Next.js 15 (App Router), TypeScript, Tailwind CSS v4
+- Backend: NestJS, TypeScript, Prisma, PostgreSQL, JWT, Swagger
+- Frontend: Next.js 15, TypeScript, Tailwind CSS v4
 
 ## Project structure
 
-```
-├── backend/          NestJS API (port 3001)
-├── frontend/         Next.js admin UI (port 3000)
-├── docker-compose.yml PostgreSQL for local dev
-└── package.json      npm workspaces root
+```text
+backend/   NestJS API (port 3001)
+frontend/  Next.js admin UI (port 3000)
+docker-compose.yml  PostgreSQL for local development
 ```
 
 ## Prerequisites
 
 - Node.js 20+
-- PostgreSQL 16 (or Docker)
+- PostgreSQL 16 or Docker Desktop
 
 ## Quick start
 
 ### 1. Start PostgreSQL
 
+Using Docker:
+
 ```bash
 docker compose up -d
 ```
 
-Or point `DATABASE_URL` in `backend/.env` to your own PostgreSQL instance.
+This creates a local PostgreSQL instance for the app.
 
 ### 2. Backend setup
 
@@ -50,12 +38,14 @@ Or point `DATABASE_URL` in `backend/.env` to your own PostgreSQL instance.
 cd backend
 cp .env.example .env
 npm install
-npx prisma migrate dev --name init
+npx prisma migrate deploy
 npm run prisma:seed
 npm run start:dev
 ```
 
-API runs at **http://localhost:3001**
+The API will run at http://localhost:3001.
+
+Swagger docs are available at http://localhost:3001/docs.
 
 ### 3. Frontend setup
 
@@ -66,77 +56,68 @@ npm install
 npm run dev
 ```
 
-Frontend runs at **http://localhost:3000**
+The UI will run at http://localhost:3000.
+
+## Database setup
+
+If you need to create the database manually:
+
+```bash
+createdb DEALPORT
+psql -U dealport -d DEALPORT
+```
+
+If you are using the local app credentials from the example env, the backend expects:
+
+```text
+postgresql://dealport:dealport@localhost:5432/DEALPORT?schema=public
+```
+
+## Prisma migration commands
+
+From the backend folder:
+
+```bash
+npx prisma migrate dev
+npx prisma migrate deploy
+npx prisma generate
+```
 
 ## Environment variables
 
-### Backend (`backend/.env`)
+### Backend
 
-| Variable | Description |
-|----------|-------------|
-| `DATABASE_URL` | PostgreSQL connection string |
-| `JWT_SECRET` | Secret for signing JWT tokens |
-| `JWT_EXPIRES_IN` | Token expiry (default `7d`) |
-| `PORT` | API port (default `3001`) |
-| `CORS_ORIGIN` | Allowed frontend origin |
+Create a backend/.env file from .env.example with:
 
-### Frontend (`frontend/.env.local`)
+```env
+DATABASE_URL="postgresql://dealport:dealport@localhost:5432/DEALPORT?schema=public"
+JWT_SECRET="change-me-in-production"
+JWT_EXPIRES_IN="7d"
+PORT=3001
+CORS_ORIGIN="http://localhost:3000"
+```
 
-| Variable | Description |
-|----------|-------------|
-| `NEXT_PUBLIC_API_URL` | Backend API base URL |
+### Frontend
 
-## API endpoints
+Create a frontend/.env.local file with:
 
-| Method | Path | Auth | Description |
-|--------|------|------|-------------|
-| POST | `/auth/login` | No | Admin login |
-| GET | `/products` | JWT | List products (search, filter, pagination) |
-| GET | `/products/top` | JWT | Top selling products |
-| GET | `/products/:id` | JWT | Get product |
-| POST | `/products` | JWT | Create product |
-| PATCH | `/products/:id` | JWT | Update product |
-| DELETE | `/products/:id` | JWT | Delete product |
-| GET | `/categories` | JWT | List categories |
-| GET | `/categories/:id` | JWT | Get category |
-| POST | `/categories` | JWT | Create category |
-| PATCH | `/categories/:id` | JWT | Update category |
-| DELETE | `/categories/:id` | JWT | Delete category |
-| GET | `/tags` | JWT | List tags |
-| GET | `/tags/:id` | JWT | Get tag |
-| POST | `/tags` | JWT | Create tag |
-| PATCH | `/tags/:id` | JWT | Update tag |
-| DELETE | `/tags/:id` | JWT | Delete tag |
+```env
+NEXT_PUBLIC_API_URL="http://localhost:3001"
+```
 
-## Architecture notes
+## Seed credentials
 
-- **Backend:** Controller → Service → Prisma pattern. DTOs validated with `class-validator`. JWT guards protect all product/category/tag routes.
-- **Frontend:** Client-side auth token in `localStorage`. Typed API client in `src/lib/api.ts`. Admin shell with sidebar navigation matching DEALPORT green theme.
-- **Dashboard:** Stat cards and transaction table use static demo data (per scope). Best Selling / Top Products widgets load from `GET /products/top`.
-- **Image upload:** File picker previews via base64 locally. Only valid HTTP URLs are persisted to the API (documented stub approach).
+```text
+Email: admin@dealport.com
+Password: admin123
+```
 
-## Deployment
+## API highlights
 
-### Backend (e.g. Railway / Render)
-
-1. Provision PostgreSQL
-2. Set env vars from `.env.example`
-3. Run `npx prisma migrate deploy && npm run prisma:seed`
-4. Start with `npm run start:prod`
-
-### Frontend (e.g. Vercel)
-
-1. Set `NEXT_PUBLIC_API_URL` to deployed API URL
-2. Deploy with default Next.js settings
-
-## Hours spent
-
-_Approximate: fill in before submission_
-
-## Scoped screens implemented
-
-- [x] Dashboard (shell, stats, chart, transactions, API-driven product widgets)
-- [x] Add Product (form, publish/draft, categories/tags, image UI)
-- [x] Product List (API list, search, filter, pagination)
-# m
-# dealport
+- POST /auth/login
+- GET /products
+- GET /products/top
+- GET /dashboard/stats
+- GET /dashboard/card-stats
+- GET /dashboard/weekly-report
+- Swagger docs at /docs

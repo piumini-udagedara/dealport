@@ -14,6 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TagsController = void 0;
 const common_1 = require("@nestjs/common");
+const swagger_1 = require("@nestjs/swagger");
 const jwt_auth_guard_1 = require("../auth/jwt-auth.guard");
 const create_tag_dto_1 = require("./dto/create-tag.dto");
 const update_tag_dto_1 = require("./dto/update-tag.dto");
@@ -42,12 +43,17 @@ let TagsController = class TagsController {
 exports.TagsController = TagsController;
 __decorate([
     (0, common_1.Get)(),
+    (0, swagger_1.ApiOperation)({ summary: 'List tags' }),
+    (0, swagger_1.ApiResponse)({ status: 200, description: 'Tags returned successfully' }),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], TagsController.prototype, "findAll", null);
 __decorate([
     (0, common_1.Get)(':id'),
+    (0, swagger_1.ApiOperation)({ summary: 'Get one tag by id' }),
+    (0, swagger_1.ApiResponse)({ status: 200, description: 'Tag returned successfully' }),
+    (0, swagger_1.ApiResponse)({ status: 404, description: 'Tag not found' }),
     __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
@@ -55,6 +61,8 @@ __decorate([
 ], TagsController.prototype, "findOne", null);
 __decorate([
     (0, common_1.Post)(),
+    (0, swagger_1.ApiOperation)({ summary: 'Create a tag' }),
+    (0, swagger_1.ApiResponse)({ status: 201, description: 'Tag created successfully' }),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_tag_dto_1.CreateTagDto]),
@@ -62,6 +70,8 @@ __decorate([
 ], TagsController.prototype, "create", null);
 __decorate([
     (0, common_1.Patch)(':id'),
+    (0, swagger_1.ApiOperation)({ summary: 'Update a tag' }),
+    (0, swagger_1.ApiResponse)({ status: 200, description: 'Tag updated successfully' }),
     __param(0, (0, common_1.Param)('id')),
     __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
@@ -70,12 +80,16 @@ __decorate([
 ], TagsController.prototype, "update", null);
 __decorate([
     (0, common_1.Delete)(':id'),
+    (0, swagger_1.ApiOperation)({ summary: 'Delete a tag' }),
+    (0, swagger_1.ApiResponse)({ status: 200, description: 'Tag deleted successfully' }),
     __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], TagsController.prototype, "remove", null);
 exports.TagsController = TagsController = __decorate([
+    (0, swagger_1.ApiTags)('tags'),
+    (0, swagger_1.ApiBearerAuth)(),
     (0, common_1.Controller)('tags'),
     (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard),
     __metadata("design:paramtypes", [tags_service_1.TagsService])

@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { ValidationPipe } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
@@ -23,6 +24,16 @@ async function bootstrap() {
       transformOptions: { enableImplicitConversion: true },
     }),
   );
+
+  const configSwagger = new DocumentBuilder()
+    .setTitle('Dealport API')
+    .setDescription('API documentation for the Dealport admin backend')
+    .setVersion('1.0')
+    .addBearerAuth()
+    .build();
+
+  const documentFactory = () => SwaggerModule.createDocument(app, configSwagger);
+  SwaggerModule.setup('docs', app, documentFactory);
 
   const port = config.get<number>('PORT', 3001);
   await app.listen(port);

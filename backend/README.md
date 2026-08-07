@@ -96,4 +96,57 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
-# DEALPORT
+# DEALPORT Backend
+
+NestJS + Prisma backend for the DEALPORT admin dashboard.
+
+## Setup
+
+```bash
+cd backend
+cp .env.example .env
+npm install
+npx prisma migrate deploy
+npm run prisma:seed
+npm run start:dev
+```
+
+## Database setup
+
+If PostgreSQL is not already running, start it with:
+
+```bash
+cd ..
+docker compose up -d
+```
+
+Create or verify the local database:
+
+```bash
+createdb DEALPORT
+```
+
+The backend expects the following connection string:
+
+```env
+DATABASE_URL="postgresql://dealport:dealport@localhost:5432/DEALPORT?schema=public"
+```
+
+## Prisma commands
+
+```bash
+npx prisma migrate dev
+npx prisma migrate deploy
+npx prisma generate
+npm run prisma:seed
+```
+
+## Run locally
+
+```bash
+npm run start:dev
+```
+
+The API will run on http://localhost:3001.
+
+Swagger docs are available at http://localhost:3001/docs.
