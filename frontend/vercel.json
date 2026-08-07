@@ -1,0 +1,5 @@
+{
+
+  "installCommand": "npm install --production=false --include=optional",
+  "buildCommand": "npm run build"
+}
