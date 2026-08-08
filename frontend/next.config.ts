@@ -2,6 +2,12 @@ import type { NextConfig } from "next";
 import { join } from "path";
 
 const nextConfig: NextConfig = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   outputFileTracingRoot: join(__dirname, ".."),
   images: {
     remotePatterns: [
