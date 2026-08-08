@@ -429,6 +429,8 @@ export default function AddProductPage() {
                 const { src, useNextImage } = resolveImageSrc(main || "");
                 return useNextImage ? (
                   <Image
+                    width={560}
+                    height={352}
                     src={src}
                     alt={main ? "Product preview" : "Placeholder image"}
                     fill
@@ -436,9 +438,14 @@ export default function AddProductPage() {
                     priority={false}
                   />
                 ) : (
-                  <img
+                  <Image
+                    width={560}
+                    height={352}
                     src={src}
                     alt={main ? "Product preview" : "Placeholder image"}
+                    fill
+                    priority={false}
+                    unoptimized
                     className="h-full w-full object-cover"
                   />
                 );
@@ -495,7 +502,7 @@ export default function AddProductPage() {
                         className="object-cover"
                       />
                     ) : (
-                      <img
+                      <Image
                         src={src}
                         alt={`Image ${i + 1}`}
                         width={56}

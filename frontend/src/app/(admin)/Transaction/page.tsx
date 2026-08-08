@@ -1,9 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
-import { Button } from "@/components/ui/Button";
 
 const TransactionPage = () => {
+  const [currentPage, setCurrentPage] = React.useState(1);
+  const pageSize = 5;
+  const totalTransactions = 10;
+  const totalPages = Math.ceil(totalTransactions / pageSize);
+  const isRowVisible = (rowIndex: number) => Math.floor(rowIndex / pageSize) + 1 === currentPage;
+
   return (
     <div className="w-full overflow-x-auto">
       <div className="min-w-[980px] lg:min-w-0">
@@ -18,7 +24,10 @@ const TransactionPage = () => {
               >
                 <div className="flex justify-between items-center self-stretch mb-4 ml-4">
                   <span className="text-[#23272E] text-lg font-bold">{"Total Revenue"}</span>
-                  <img
+                  <Image
+                    height={20}
+                    width={20}
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/rbsvaaq3_expires_30_days.png"
                     }
@@ -28,7 +37,10 @@ const TransactionPage = () => {
                 <div className="flex items-start mb-2 ml-4 gap-[11px]">
                   <span className="text-[#023337] text-[32px] font-bold">{"$15,045"}</span>
                   <div className="flex shrink-0 items-center mt-3.5">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/th4c2v01_expires_30_days.png"
                       }
@@ -47,7 +59,10 @@ const TransactionPage = () => {
               >
                 <div className="flex justify-between items-center self-stretch mb-4 ml-4">
                   <span className="text-[#23272E] text-lg font-bold">{"Pending Transactions"}</span>
-                  <img
+                  <Image
+                    alt=""
+                    width={20}
+                    height={20}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/4v4xneoo_expires_30_days.png"
                     }
@@ -72,7 +87,10 @@ const TransactionPage = () => {
                   <span className="text-[#23272E] text-lg font-bold">
                     {"Completed Transactions"}
                   </span>
-                  <img
+                  <Image
+                    alt=""
+                    width={20}
+                    height={20}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/kyrb5jt7_expires_30_days.png"
                     }
@@ -82,7 +100,10 @@ const TransactionPage = () => {
                 <div className="flex items-start mb-2 ml-4 gap-[11px]">
                   <span className="text-[#023337] text-[32px] font-bold">{"3,150"}</span>
                   <div className="flex shrink-0 items-center mt-3.5">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/i3qj8gtt_expires_30_days.png"
                       }
@@ -101,7 +122,10 @@ const TransactionPage = () => {
               >
                 <div className="flex justify-between items-center self-stretch mb-4 ml-4">
                   <span className="text-[#23272E] text-lg font-bold">{"Failed Transactions"}</span>
-                  <img
+                  <Image
+                    alt=""
+                    width={20}
+                    height={20}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/kkc9gvhm_expires_30_days.png"
                     }
@@ -123,7 +147,10 @@ const TransactionPage = () => {
             >
               <div className="flex justify-between items-center self-stretch mb-5 ml-4">
                 <span className="text-[#23272E] text-lg font-bold">{"Payment Method"}</span>
-                <img
+                <Image
+                  alt=""
+                  width={20}
+                  height={20}
                   src={
                     "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/ysz0gefn_expires_30_days.png"
                   }
@@ -132,19 +159,28 @@ const TransactionPage = () => {
               </div>
               <div className="flex items-start mb-3 ml-5 gap-4">
                 <div className="flex flex-col shrink-0 items-center relative">
-                  <img
+                  <Image
+                    alt=""
+                    width={110}
+                    height={134}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/fag32uvr_expires_30_days.png"
                     }
                     className="w-[110px] h-[134px] absolute top-0 right-0 object-fill"
                   />
-                  <img
+                  <Image
+                    alt=""
+                    width={260}
+                    height={163}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/m7ebbpy6_expires_30_days.png"
                     }
                     className="w-[260px] h-[163px] object-fill"
                   />
-                  <img
+                  <Image
+                    alt=""
+                    width={168}
+                    height={77}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/zbrq917m_expires_30_days.png"
                     }
@@ -163,7 +199,10 @@ const TransactionPage = () => {
                   className="flex shrink-0 items-center bg-white text-left py-[7px] px-[85px] gap-1 rounded-lg border border-solid border-gray-300"
                   onClick={() => alert("Pressed!")}
                 >
-                  <img
+                  <Image
+                    alt=""
+                    width={24}
+                    height={24}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/a04zixb3_expires_30_days.png"
                     }
@@ -213,26 +252,38 @@ const TransactionPage = () => {
                   <span className="text-[#6A717F] text-sm mr-[77px]">
                     {"Search payment history"}
                   </span>
-                  <img
+                  <Image
+                    alt=""
+                    width={20}
+                    height={20}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/hhdj426x_expires_30_days.png"
                     }
                     className="w-6 h-6 rounded-lg object-fill"
                   />
                 </button>
-                <img
+                <Image
+                  alt=""
+                  width={40}
+                  height={40}
                   src={
                     "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/0qtm8776_expires_30_days.png"
                   }
                   className="w-10 h-10 rounded object-fill"
                 />
-                <img
+                <Image
+                  alt=""
+                  width={40}
+                  height={40}
                   src={
                     "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/9hx6kc92_expires_30_days.png"
                   }
                   className="w-10 h-10 rounded object-fill"
                 />
-                <img
+                <Image
+                  alt=""
+                  width={40}
+                  height={40}
                   src={
                     "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/9lot1cs2_expires_30_days.png"
                   }
@@ -264,7 +315,7 @@ const TransactionPage = () => {
                   <span className="text-[#023337] text-[15px]">{"Action"}</span>
                 </div>
               </div>
-              <div className="flex items-center self-stretch py-3 px-2">
+              <div className="flex items-center self-stretch py-3 px-2" style={{ display: isRowVisible(0) ? undefined : "none" }}>
                 <div className="flex flex-1 flex-col items-center py-2.5 mr-4">
                   <span className="text-black text-[15px]">{"#CUST001"}</span>
                 </div>
@@ -281,7 +332,10 @@ const TransactionPage = () => {
                   <span className="text-black text-[15px]">{"CC"}</span>
                 </div>
                 <div className="flex flex-1 justify-end items-center p-2.5 mr-4">
-                  <img
+                  <Image
+                    width={8}
+                    height={8}
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/6bdvoso9_expires_30_days.png"
                     }
@@ -293,7 +347,7 @@ const TransactionPage = () => {
                   <span className="text-[#6467F2] text-[15px]">{"View Details"}</span>
                 </div>
               </div>
-              <div className="flex items-center self-stretch py-3 px-2">
+              <div className="flex items-center self-stretch py-3 px-2" style={{ display: isRowVisible(1) ? undefined : "none" }}>
                 <div className="flex flex-1 flex-col items-center py-2.5 mr-4">
                   <span className="text-black text-[15px]">{"#CUST001"}</span>
                 </div>
@@ -310,7 +364,10 @@ const TransactionPage = () => {
                   <span className="text-black text-[15px]">{"PayPal"}</span>
                 </div>
                 <div className="flex flex-1 justify-end items-center p-2.5 mr-4">
-                  <img
+                  <Image
+                    width={8}
+                    height={8}
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/eexu940c_expires_30_days.png"
                     }
@@ -322,7 +379,7 @@ const TransactionPage = () => {
                   <span className="text-[#6467F2] text-[15px]">{"View Details"}</span>
                 </div>
               </div>
-              <div className="flex items-center self-stretch py-3 px-2">
+              <div className="flex items-center self-stretch py-3 px-2" style={{ display: isRowVisible(2) ? undefined : "none" }}>
                 <div className="flex flex-1 flex-col items-center py-2.5 mr-4">
                   <span className="text-black text-[15px]">{"#CUST001"}</span>
                 </div>
@@ -339,7 +396,10 @@ const TransactionPage = () => {
                   <span className="text-black text-[15px]">{"CC"}</span>
                 </div>
                 <div className="flex flex-1 justify-end items-center p-2.5 mr-4">
-                  <img
+                  <Image
+                    width={8}
+                    height={8}
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/hb0qpzcs_expires_30_days.png"
                     }
@@ -351,7 +411,7 @@ const TransactionPage = () => {
                   <span className="text-[#6467F2] text-[15px]">{"View Details"}</span>
                 </div>
               </div>
-              <div className="flex items-center self-stretch py-3 px-2">
+              <div className="flex items-center self-stretch py-3 px-2" style={{ display: isRowVisible(3) ? undefined : "none" }}>
                 <div className="flex flex-1 flex-col items-center py-2.5 mr-4">
                   <span className="text-black text-[15px]">{"#CUST001"}</span>
                 </div>
@@ -368,7 +428,10 @@ const TransactionPage = () => {
                   <span className="text-black text-[15px]">{"Bank"}</span>
                 </div>
                 <div className="flex flex-1 justify-end items-center p-2.5 mr-4">
-                  <img
+                  <Image
+                    width={8}
+                    height={8}
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/f1htolfl_expires_30_days.png"
                     }
@@ -380,7 +443,7 @@ const TransactionPage = () => {
                   <span className="text-[#6467F2] text-[15px]">{"View Details"}</span>
                 </div>
               </div>
-              <div className="flex items-center self-stretch py-3 px-2">
+              <div className="flex items-center self-stretch py-3 px-2" style={{ display: isRowVisible(4) ? undefined : "none" }}>
                 <div className="flex flex-1 flex-col items-center py-2.5 mr-4">
                   <span className="text-black text-[15px]">{"#CUST001"}</span>
                 </div>
@@ -397,7 +460,10 @@ const TransactionPage = () => {
                   <span className="text-black text-[15px]">{"CC"}</span>
                 </div>
                 <div className="flex flex-1 justify-end items-center p-2.5 mr-4">
-                  <img
+                  <Image
+                    width={8}
+                    height={8}
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/9kpxcu40_expires_30_days.png"
                     }
@@ -409,7 +475,7 @@ const TransactionPage = () => {
                   <span className="text-[#6467F2] text-[15px]">{"View Details"}</span>
                 </div>
               </div>
-              <div className="flex items-center self-stretch py-3 px-2">
+              <div className="flex items-center self-stretch py-3 px-2" style={{ display: isRowVisible(5) ? undefined : "none" }}>
                 <div className="flex flex-1 flex-col items-center py-2.5 mr-4">
                   <span className="text-black text-[15px]">{"#CUST001"}</span>
                 </div>
@@ -426,7 +492,10 @@ const TransactionPage = () => {
                   <span className="text-black text-[15px]">{"PayPal"}</span>
                 </div>
                 <div className="flex flex-1 items-center p-2.5 mr-4">
-                  <img
+                  <Image
+                    width={8}
+                    height={8}
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/c4jsjuw7_expires_30_days.png"
                     }
@@ -438,7 +507,7 @@ const TransactionPage = () => {
                   <span className="text-[#6467F2] text-[15px]">{"View Details"}</span>
                 </div>
               </div>
-              <div className="flex items-center self-stretch py-3 px-2">
+              <div className="flex items-center self-stretch py-3 px-2" style={{ display: isRowVisible(6) ? undefined : "none" }}>
                 <div className="flex flex-1 flex-col items-center py-2.5 mr-4">
                   <span className="text-black text-[15px]">{"#CUST001"}</span>
                 </div>
@@ -455,7 +524,10 @@ const TransactionPage = () => {
                   <span className="text-black text-[15px]">{"Bank"}</span>
                 </div>
                 <div className="flex flex-1 justify-end items-center p-2.5 mr-4">
-                  <img
+                  <Image
+                    width={8}
+                    height={8}
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/eskawlg4_expires_30_days.png"
                     }
@@ -467,7 +539,7 @@ const TransactionPage = () => {
                   <span className="text-[#6467F2] text-[15px]">{"View Details"}</span>
                 </div>
               </div>
-              <div className="flex items-center self-stretch py-3 px-2">
+              <div className="flex items-center self-stretch py-3 px-2" style={{ display: isRowVisible(7) ? undefined : "none" }}>
                 <div className="flex flex-1 flex-col items-center py-2.5 mr-4">
                   <span className="text-black text-[15px]">{"#CUST001"}</span>
                 </div>
@@ -484,7 +556,10 @@ const TransactionPage = () => {
                   <span className="text-black text-[15px]">{"CC"}</span>
                 </div>
                 <div className="flex flex-1 justify-end items-center p-2.5 mr-4">
-                  <img
+                  <Image
+                    width={8}
+                    height={8}
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/uwjxofl9_expires_30_days.png"
                     }
@@ -496,7 +571,7 @@ const TransactionPage = () => {
                   <span className="text-[#6467F2] text-[15px]">{"View Details"}</span>
                 </div>
               </div>
-              <div className="flex items-center self-stretch py-3 px-2">
+              <div className="flex items-center self-stretch py-3 px-2" style={{ display: isRowVisible(8) ? undefined : "none" }}>
                 <div className="flex flex-1 flex-col items-center py-2.5 mr-4">
                   <span className="text-black text-[15px]">{"#CUST001"}</span>
                 </div>
@@ -513,7 +588,10 @@ const TransactionPage = () => {
                   <span className="text-black text-[15px]">{"PayPal"}</span>
                 </div>
                 <div className="flex flex-1 items-center p-2.5 mr-4">
-                  <img
+                  <Image
+                    width={8}
+                    height={8}
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/aga43d17_expires_30_days.png"
                     }
@@ -525,7 +603,7 @@ const TransactionPage = () => {
                   <span className="text-[#6467F2] text-[15px]">{"View Details"}</span>
                 </div>
               </div>
-              <div className="flex items-center self-stretch py-3 px-2">
+              <div className="flex items-center self-stretch py-3 px-2" style={{ display: isRowVisible(9) ? undefined : "none" }}>
                 <div className="flex flex-1 flex-col items-center py-2.5 mr-4">
                   <span className="text-black text-[15px]">{"#CUST001"}</span>
                 </div>
@@ -542,7 +620,10 @@ const TransactionPage = () => {
                   <span className="text-black text-[15px]">{"Bank"}</span>
                 </div>
                 <div className="flex flex-1 justify-end items-center p-2.5 mr-4">
-                  <img
+                  <Image
+                    width={8}
+                    height={8}
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/zjja2h32_expires_30_days.png"
                     }
@@ -563,7 +644,10 @@ const TransactionPage = () => {
                 }}
                 onClick={() => alert("Pressed!")}
               >
-                <img
+                <Image
+                  width={24}
+                  height={24}
+                  alt=""
                   src={
                     "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/z1dehqv4_expires_30_days.png"
                   }
@@ -623,7 +707,10 @@ const TransactionPage = () => {
                 onClick={() => alert("Pressed!")}
               >
                 <span className="text-black text-[15px]">{"Next"}</span>
-                <img
+                <Image
+                  width={24}
+                  height={24}
+                  alt=""
                   src={
                     "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/upbkpx18_expires_30_days.png"
                   }

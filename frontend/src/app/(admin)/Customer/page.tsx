@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Button } from "@/components/ui/Button";
+import Image from "next/image";
 
 const CustomerPage = () => {
   const [input1, onChangeInput1] = useState("");
@@ -19,7 +19,10 @@ const CustomerPage = () => {
               >
                 <div className="flex justify-between items-center self-stretch mb-4 ml-4">
                   <span className="text-[#23272E] text-lg font-bold">{"Total Customers"}</span>
-                  <img
+                  <Image
+                    alt=""
+                    width={20}
+                    height={20}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/dtpzhske_expires_30_days.png"
                     }
@@ -29,7 +32,10 @@ const CustomerPage = () => {
                 <div className="flex items-start mb-2 ml-4 gap-3">
                   <span className="text-[#023337] text-[32px] font-bold">{"11,040"}</span>
                   <div className="flex shrink-0 items-center mt-3.5">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/dbrtjm49_expires_30_days.png"
                       }
@@ -48,7 +54,10 @@ const CustomerPage = () => {
               >
                 <div className="flex justify-between items-center self-stretch mb-4 ml-4">
                   <span className="text-[#23272E] text-lg font-bold">{"New Customers"}</span>
-                  <img
+                  <Image
+                    alt=""
+                    width={20}
+                    height={20}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/itce8ho6_expires_30_days.png"
                     }
@@ -58,7 +67,10 @@ const CustomerPage = () => {
                 <div className="flex items-start mb-2 ml-4 gap-[11px]">
                   <span className="text-[#023337] text-[32px] font-bold">{"2,370"}</span>
                   <div className="flex shrink-0 items-center mt-3.5">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/ve2i174n_expires_30_days.png"
                       }
@@ -77,7 +89,10 @@ const CustomerPage = () => {
               >
                 <div className="flex justify-between items-center self-stretch mb-4 ml-4">
                   <span className="text-[#23272E] text-lg font-bold">{"Visitor"}</span>
-                  <img
+                  <Image
+                    alt=""
+                    width={20}
+                    height={20}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/o86atfa6_expires_30_days.png"
                     }
@@ -87,7 +102,10 @@ const CustomerPage = () => {
                 <div className="flex items-start mb-2 ml-4 gap-2.5">
                   <span className="text-[#023337] text-[32px] font-bold">{"250k"}</span>
                   <div className="flex shrink-0 items-center mt-3.5">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/u5dtuo4r_expires_30_days.png"
                       }
@@ -119,7 +137,10 @@ const CustomerPage = () => {
                     <span className="text-[#6A717F] text-xs">{"Last week"}</span>
                   </div>
                 </div>
-                <img
+                <Image
+                  alt=""
+                  width={20}
+                  height={20}
                   src={
                     "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/n0j5xvjl_expires_30_days.png"
                   }
@@ -238,7 +259,10 @@ const CustomerPage = () => {
                     <span className="text-black text-[15px]">{"3,450.00"}</span>
                   </div>
                   <div className="flex flex-1 items-center p-2.5 mr-[17px]">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/odclt1t9_expires_30_days.png"
                       }
@@ -247,13 +271,19 @@ const CustomerPage = () => {
                     <span className="text-[#21C45D] text-[15px]">{"Active"}</span>
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-[47px] gap-2">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/l9567lmx_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/djcca4m7_expires_30_days.png"
                       }
@@ -278,7 +308,10 @@ const CustomerPage = () => {
                     <span className="text-black text-[15px]">{"3,450.00"}</span>
                   </div>
                   <div className="flex flex-1 items-center p-2.5 mr-[17px]">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/nbud9geu_expires_30_days.png"
                       }
@@ -287,13 +320,19 @@ const CustomerPage = () => {
                     <span className="text-[#21C45D] text-[15px]">{"Active"}</span>
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-[47px] gap-2">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/ijqp875b_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/y4yhuxk7_expires_30_days.png"
                       }
@@ -318,7 +357,10 @@ const CustomerPage = () => {
                     <span className="text-black text-[15px]">{"3,450.00"}</span>
                   </div>
                   <div className="flex flex-1 items-center p-2.5 mr-[17px]">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/00d1z0ol_expires_30_days.png"
                       }
@@ -327,13 +369,19 @@ const CustomerPage = () => {
                     <span className="text-[#21C45D] text-[15px]">{"Active"}</span>
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-[47px] gap-2">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/8oh6briq_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/6qlm2z3d_expires_30_days.png"
                       }
@@ -358,7 +406,10 @@ const CustomerPage = () => {
                     <span className="text-black text-[15px]">{"3,450.00"}</span>
                   </div>
                   <div className="flex flex-1 items-center p-2.5 mr-[17px]">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/yupkwi1k_expires_30_days.png"
                       }
@@ -367,13 +418,19 @@ const CustomerPage = () => {
                     <span className="text-[#21C45D] text-[15px]">{"Active"}</span>
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-[47px] gap-2">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/yn90fysa_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/vbikgnb9_expires_30_days.png"
                       }
@@ -398,7 +455,10 @@ const CustomerPage = () => {
                     <span className="text-black text-[15px]">{"250.00"}</span>
                   </div>
                   <div className="flex flex-1 items-center p-2.5 mr-[17px]">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/uc2kn76x_expires_30_days.png"
                       }
@@ -407,13 +467,19 @@ const CustomerPage = () => {
                     <span className="text-[#EF4343] text-[15px]">{"Inactive"}</span>
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-[47px] gap-2">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/ao38zwfl_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/j0wp9muz_expires_30_days.png"
                       }
@@ -438,7 +504,10 @@ const CustomerPage = () => {
                     <span className="text-black text-[15px]">{"4,600.00"}</span>
                   </div>
                   <div className="flex flex-1 items-center p-2.5 mr-[17px]">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/5p5za4lu_expires_30_days.png"
                       }
@@ -447,13 +516,19 @@ const CustomerPage = () => {
                     <span className="text-[#FBBD23] text-[15px]">{"VIP"}</span>
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-[47px] gap-2">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/hcy1waic_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/mlmnxljw_expires_30_days.png"
                       }
@@ -478,7 +553,10 @@ const CustomerPage = () => {
                     <span className="text-black text-[15px]">{"250.00"}</span>
                   </div>
                   <div className="flex flex-1 items-center p-2.5 mr-[17px]">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/9op1dq0s_expires_30_days.png"
                       }
@@ -487,13 +565,19 @@ const CustomerPage = () => {
                     <span className="text-[#EF4343] text-[15px]">{"Inactive"}</span>
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-[47px] gap-2">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/puw1zj7u_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/bo0xttit_expires_30_days.png"
                       }
@@ -518,7 +602,10 @@ const CustomerPage = () => {
                     <span className="text-black text-[15px]">{"3,450.00"}</span>
                   </div>
                   <div className="flex flex-1 items-center p-2.5 mr-[17px]">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/z97k43d4_expires_30_days.png"
                       }
@@ -527,13 +614,19 @@ const CustomerPage = () => {
                     <span className="text-[#21C45D] text-[15px]">{"Active"}</span>
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-[47px] gap-2">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/7svp3r3k_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/lm5gdc0o_expires_30_days.png"
                       }
@@ -558,7 +651,10 @@ const CustomerPage = () => {
                     <span className="text-black text-[15px]">{"4,600.00"}</span>
                   </div>
                   <div className="flex flex-1 items-center p-2.5 mr-[17px]">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/pi1mcngd_expires_30_days.png"
                       }
@@ -567,13 +663,19 @@ const CustomerPage = () => {
                     <span className="text-[#FBBD23] text-[15px]">{"VIP"}</span>
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-[47px] gap-2">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/7qzn0ne1_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/792rfg73_expires_30_days.png"
                       }
@@ -598,7 +700,10 @@ const CustomerPage = () => {
                     <span className="text-black text-[15px]">{"250.00"}</span>
                   </div>
                   <div className="flex flex-1 items-center p-2.5 mr-[17px]">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/qadfudnp_expires_30_days.png"
                       }
@@ -607,13 +712,19 @@ const CustomerPage = () => {
                     <span className="text-[#EF4343] text-[15px]">{"Inactive"}</span>
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-[47px] gap-2">
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/q52126ro_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
-                    <img
+                    <Image
+                      alt=""
+                      width={20}
+                      height={20}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/0e4q6agd_expires_30_days.png"
                       }
@@ -630,7 +741,10 @@ const CustomerPage = () => {
                   }}
                   onClick={() => alert("Pressed!")}
                 >
-                  <img
+                  <Image
+                    alt=""
+                    width={24}
+                    height={24}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/kkprz1se_expires_30_days.png"
                     }
@@ -690,7 +804,10 @@ const CustomerPage = () => {
                   onClick={() => alert("Pressed!")}
                 >
                   <span className="text-black text-[15px]">{"Next"}</span>
-                  <img
+                  <Image
+                    alt=""
+                    width={24}
+                    height={24}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/w7ndqyn6_expires_30_days.png"
                     }
@@ -706,7 +823,10 @@ const CustomerPage = () => {
               }}
             >
               <div className="flex items-center self-stretch mb-6 gap-3">
-                <img
+                <Image
+                  alt=""
+                  width={64}
+                  height={64}
                   src={
                     "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/8x5uzm5r_expires_30_days.png"
                   }
@@ -716,7 +836,10 @@ const CustomerPage = () => {
                   <span className="text-[#023337] text-lg font-bold">{"John Doe"}</span>
                   <div className="flex justify-between items-center self-stretch">
                     <span className="text-[#6A717F] text-sm">{"john.doe@example.com"}</span>
-                    <img
+                    <Image
+                      alt=""
+                      width={16}
+                      height={16}
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/g8y13fhy_expires_30_days.png"
                       }
@@ -728,7 +851,10 @@ const CustomerPage = () => {
               <span className="text-gray-400 text-sm mb-3">{"Customer Info"}</span>
               <div className="flex flex-col self-stretch mb-6 gap-3">
                 <div className="flex items-center self-stretch bg-white px-2 rounded border border-solid border-gray-200">
-                  <img
+                  <Image
+                    alt=""
+                    width={20}
+                    height={20}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/6sx4hiyv_expires_30_days.png"
                     }
@@ -742,7 +868,10 @@ const CustomerPage = () => {
                   />
                 </div>
                 <div className="flex items-center self-stretch bg-white py-2.5 pl-2 gap-1 rounded border border-solid border-gray-200">
-                  <img
+                  <Image
+                    alt=""
+                    width={20}
+                    height={20}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/glu1c380_expires_30_days.png"
                     }
@@ -754,31 +883,46 @@ const CustomerPage = () => {
               <div className="flex flex-col items-start w-[168px] mb-6 gap-3">
                 <span className="text-gray-400 text-sm">{"Social Media"}</span>
                 <div className="flex justify-center items-center self-stretch gap-3">
-                  <img
+                  <Image
+                    alt=""
+                    width={24}
+                    height={24}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/zxxp476t_expires_30_days.png"
                     }
                     className="w-6 h-6 rounded object-fill"
                   />
-                  <img
+                  <Image
+                    alt=""
+                    width={24}
+                    height={24}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/jsm1k8ex_expires_30_days.png"
                     }
                     className="w-6 h-6 rounded object-fill"
                   />
-                  <img
+                  <Image
+                    alt=""
+                    width={24}
+                    height={24}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/a9zfpp3b_expires_30_days.png"
                     }
                     className="w-6 h-6 rounded object-fill"
                   />
-                  <img
+                  <Image
+                    alt=""
+                    width={24}
+                    height={24}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/o7gnxm6d_expires_30_days.png"
                     }
                     className="w-6 h-6 rounded object-fill"
                   />
-                  <img
+                  <Image
+                    alt=""
+                    width={24}
+                    height={24}
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/kiysm6ys_expires_30_days.png"
                     }

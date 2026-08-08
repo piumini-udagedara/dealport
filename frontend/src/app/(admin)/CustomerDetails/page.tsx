@@ -19,6 +19,7 @@ const CustomerDetailsPage = () => {
                 <div className="flex justify-between items-center self-stretch mb-4 ml-4">
                   <span className="text-[#23272E] text-lg font-bold">{"Total Customers"}</span>
                   <img
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/k74dgpt5_expires_30_days.png"
                     }
@@ -29,6 +30,7 @@ const CustomerDetailsPage = () => {
                   <span className="text-[#023337] text-[32px] font-bold">{"11,040"}</span>
                   <div className="flex shrink-0 items-center mt-3.5">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/xyt9xzt0_expires_30_days.png"
                       }
@@ -48,6 +50,7 @@ const CustomerDetailsPage = () => {
                 <div className="flex justify-between items-center self-stretch mb-4 ml-4">
                   <span className="text-[#23272E] text-lg font-bold">{"New Customers"}</span>
                   <img
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/2gmipn2b_expires_30_days.png"
                     }
@@ -58,6 +61,7 @@ const CustomerDetailsPage = () => {
                   <span className="text-[#023337] text-[32px] font-bold">{"2,370"}</span>
                   <div className="flex shrink-0 items-center mt-3.5">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/wrwps4z4_expires_30_days.png"
                       }
@@ -77,6 +81,7 @@ const CustomerDetailsPage = () => {
                 <div className="flex justify-between items-center self-stretch mb-4 ml-4">
                   <span className="text-[#23272E] text-lg font-bold">{"Visitor"}</span>
                   <img
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/xngv56l1_expires_30_days.png"
                     }
@@ -87,6 +92,7 @@ const CustomerDetailsPage = () => {
                   <span className="text-[#023337] text-[32px] font-bold">{"250k"}</span>
                   <div className="flex shrink-0 items-center mt-3.5">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/0kx2tspi_expires_30_days.png"
                       }
@@ -119,6 +125,7 @@ const CustomerDetailsPage = () => {
                   </div>
                 </div>
                 <img
+                  alt=""
                   src={
                     "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/74554f0g_expires_30_days.png"
                   }
@@ -234,6 +241,7 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-end items-center p-2.5 mr-4 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/4hhl33gz_expires_30_days.png"
                       }
@@ -243,12 +251,14 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-6 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/3kf3s1wn_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/n31nar8s_expires_30_days.png"
                       }
@@ -274,6 +284,7 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-end items-center p-2.5 mr-4 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/8q6e4aa1_expires_30_days.png"
                       }
@@ -283,12 +294,14 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-6 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/vda557ij_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/uia8o59h_expires_30_days.png"
                       }
@@ -314,6 +327,7 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-end items-center p-2.5 mr-4 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/ycp3crk4_expires_30_days.png"
                       }
@@ -323,12 +337,14 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-6 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/34dp40p4_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/ujgrecni_expires_30_days.png"
                       }
@@ -354,6 +370,7 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-end items-center p-2.5 mr-4 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/kf46alxr_expires_30_days.png"
                       }
@@ -363,12 +380,14 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-6 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/nxltm634_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/pin635gu_expires_30_days.png"
                       }
@@ -394,6 +413,7 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-end items-center p-2.5 mr-4 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/8neypkvg_expires_30_days.png"
                       }
@@ -403,12 +423,14 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-6 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/cjk86cmm_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/ca3236yt_expires_30_days.png"
                       }
@@ -434,6 +456,7 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-end items-center p-2.5 mr-4 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/qxctougw_expires_30_days.png"
                       }
@@ -443,12 +466,14 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-6 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/pkk5sjxe_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/bft96jn0_expires_30_days.png"
                       }
@@ -474,6 +499,7 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-end items-center p-2.5 mr-4 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/fizp49i4_expires_30_days.png"
                       }
@@ -483,12 +509,14 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-6 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/crcyx7cm_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/7qvs5iqy_expires_30_days.png"
                       }
@@ -514,6 +542,7 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-end items-center p-2.5 mr-4 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/afc0hnya_expires_30_days.png"
                       }
@@ -523,12 +552,14 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-6 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/lyxv3893_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/ete5xzb5_expires_30_days.png"
                       }
@@ -554,6 +585,7 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-end items-center p-2.5 mr-4 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/ykbzstb0_expires_30_days.png"
                       }
@@ -563,12 +595,14 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-6 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/znpvqh0h_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/hawzhwa5_expires_30_days.png"
                       }
@@ -594,6 +628,7 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-end items-center p-2.5 mr-4 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/325x02nm_expires_30_days.png"
                       }
@@ -603,12 +638,14 @@ const CustomerDetailsPage = () => {
                   </div>
                   <div className="flex flex-1 justify-center items-center py-2.5 px-6 gap-2">
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/l729550h_expires_30_days.png"
                       }
                       className="w-5 h-5 object-fill"
                     />
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/ns88pfbq_expires_30_days.png"
                       }
@@ -626,6 +663,7 @@ const CustomerDetailsPage = () => {
                   onClick={() => alert("Pressed!")}
                 >
                   <img
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/17x79xfs_expires_30_days.png"
                     }
@@ -686,6 +724,7 @@ const CustomerDetailsPage = () => {
                 >
                   <span className="text-black text-[15px]">{"Next"}</span>
                   <img
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/smfxf33c_expires_30_days.png"
                     }
@@ -702,6 +741,7 @@ const CustomerDetailsPage = () => {
             >
               <div className="flex items-center self-stretch mb-6 gap-3">
                 <img
+                  alt=""
                   src={
                     "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/8x5uzm5r_expires_30_days.png"
                   }
@@ -712,6 +752,7 @@ const CustomerDetailsPage = () => {
                   <div className="flex justify-between items-center self-stretch">
                     <span className="text-[#6A717F] text-sm">{"john.doe@example.com"}</span>
                     <img
+                      alt=""
                       src={
                         "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/g8y13fhy_expires_30_days.png"
                       }
@@ -724,6 +765,7 @@ const CustomerDetailsPage = () => {
               <div className="flex flex-col self-stretch mb-6 gap-3">
                 <div className="flex items-center self-stretch bg-white px-2 rounded border border-solid border-gray-200">
                   <img
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/6sx4hiyv_expires_30_days.png"
                     }
@@ -738,6 +780,7 @@ const CustomerDetailsPage = () => {
                 </div>
                 <div className="flex items-center self-stretch bg-white py-2.5 pl-2 gap-1 rounded border border-solid border-gray-200">
                   <img
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/glu1c380_expires_30_days.png"
                     }
@@ -750,30 +793,35 @@ const CustomerDetailsPage = () => {
                 <span className="text-gray-400 text-sm">{"Social Media"}</span>
                 <div className="flex justify-center items-center self-stretch gap-3">
                   <img
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/zxxp476t_expires_30_days.png"
                     }
                     className="w-6 h-6 rounded object-fill"
                   />
                   <img
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/jsm1k8ex_expires_30_days.png"
                     }
                     className="w-6 h-6 rounded object-fill"
                   />
                   <img
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/a9zfpp3b_expires_30_days.png"
                     }
                     className="w-6 h-6 rounded object-fill"
                   />
                   <img
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/o7gnxm6d_expires_30_days.png"
                     }
                     className="w-6 h-6 rounded object-fill"
                   />
                   <img
+                    alt=""
                     src={
                       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Z6hlTOUTRm/kiysm6ys_expires_30_days.png"
                     }
